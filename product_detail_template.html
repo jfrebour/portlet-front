@@ -1,0 +1,87 @@
+<article class="detail_article_page">
+	<div class="detail_article_section_img">
+		<img src="$image.getData()" alt="$title.getData()" />
+	</div>
+	<div class="detail_article_section_text">
+		<h3>$description.getData()</h3>
+		<p>SERVING SIZE: $servingSize.getData()</p>
+		<a href="$pdf_file_download.getData()" title="Download $title.getData() PDF" target="_blank">Download PDF</a>
+	</div>
+	<a class ="back_to_the_arcive" href="/flavors-nutrition" title="back to the flavour archive" target="_self">back to flavour & nutrition</a>
+</article>
+<style>
+.detail_article_page {
+    margin: 0 auto;
+    max-width: 962px;
+    padding: 0;
+    width: 100%;
+}
+.detail_article_page .detail_article_section_img {
+    margin: 0 0 50px;
+}
+.detail_article_page .detail_article_section_img img {
+    border-radius: 10px 10px 0 0;
+}
+.detail_article_page .detail_article_section_text h3 {
+    color: #333333;
+    font-family: "Roboto Condensed",sans-serif;
+    font-size: 1.6em;
+    font-weight: 400;
+    line-height: 1.5em;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+.detail_article_page .detail_article_section_text p {
+    color: #a8bbda;
+    font-size: 1.6em;
+    font-weight: 400;
+    line-height: 1.5em;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+.detail_article_page .detail_article_section_text a {
+    background: #eb0087;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+	transform: translateZ(0px);
+	-moz-transform: translateZ(0px);
+	-webkit-transform: translateZ(0px);
+	transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+    transition-property: color, background-color;
+	-moz-transition-property: color, background-color;
+	-webkit-transition-property: color, background-color;
+}
+.detail_article_page .detail_article_section_text a:hover{
+	background: #829bc8;
+}
+.detail_article_page .back_to_the_arcive::before {
+    content: "<<";
+    font-size: 15px;
+    font-weight: 400;
+    left: 0;
+    line-height: 15px;
+    padding: 0;
+    position: absolute;
+    top: 0;
+}
+.detail_article_page .back_to_the_arcive {
+    bottom: 0;
+    box-sizing: border-box;
+    display: inline-block;
+    line-height: 15px;
+    padding-left: 15px;
+    position: absolute;
+    right: 0;
+    text-decoration: none;
+}
+.detail_article_page .back_to_the_arcive:hover{
+	text-decoration:none;
+}
+</style>

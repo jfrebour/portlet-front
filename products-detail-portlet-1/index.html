@@ -1,0 +1,180 @@
+
+<article class="products_detail_page">
+    <div class="products_detail_section_img">
+        <div class="products_detail_section_info_title_resp">
+            <h3>
+                C&eacute;r&eacute;ales Bl&eacute;dine
+            </h3>
+        </div>
+        <img src="img/product-image.png" class="img-screen" alt="" />
+        <img src="img/product-image-resp.png" class="img-resp" alt="" />
+    </div>
+    <div class="products_detail_section_info">
+        <div class="products_detail_section_info_title">
+            <h3>
+                C&eacute;r&eacute;ales Bl&eacute;dine
+            </h3>
+        </div>
+        <div class="products_detail_section_info_text">
+        $body.getData()
+            <p>
+                Les C&eacute;r&eacute;ales Bl&eacute;dine®, pour accompagner la croissance et l&#39;&eacute;veil de votre petit fut&eacute; !
+                <br />Pour continuer à faire d&eacute;couvrir de nouvelles textures et saveurs à votre bout&#39;chou, proposez-lui des recettes savoureuses Bl&eacute;dine ®. Avec ces diff&eacute;rentes vari&eacute;t&eacute;s, b&eacute;b&eacute; ne pourra être que ravi !
+                Les c&eacute;r&eacute;ales Bl&eacute;dine®, ce sont : <br />
+                • Des ingr&eacute;dients simples (des c&eacute;r&eacute;ales comme le bl&eacute; et le riz, des fruits et des l&eacute;gumes.) r&eacute;colt&eacute;s dans des champs <br /> et vergers rigoureusement s&eacute;lectionn&eacute;s.<br />
+                • Une source d&#39;&eacute;nergie qui apporte les nutriments essentiels à b&eacute;b&eacute; jusqu&#39;à 3 ans  et notamment :<br />
+                - Du COMBIFER, une combinaison de Vitamines pour sa croissance et de Fer pour son d&eacute;veloppement c&eacute;r&eacute;bral<br />
+                - À teneur garantie en Vitamines (10 vitamines* essentielles dont A, C, D...)<br />
+                - Du calcium pour la croissance osseuse**<br />
+                - Sans colorants, ni conservateurs***<br />
+                Une gamme complète de r&eacute;f&eacute;rences lact&eacute;es (Miel & Lait, Lact&eacute;e Croissance,  Goût Biscuit&eacute; & Lait, Multic&eacute;r&eacute;ales… ) et non lact&eacute;e (Fruits, Douceurs de l&eacute;gumes, L&eacute;gumes…)  qui vous aide à lui donner de bonnes habitudes alimentaires.<br />
+                Les bonnes habitudes alimentaires de votre petit fut&eacute; : un bol**** de c&eacute;r&eacute;ales Bl&eacute;dine® par jour (maximum deux bols par jour). <br /><br />
+                Le nombre de vitamines varie selon les r&eacute;f&eacute;rences. ; Calcium : uniquement pour les recettes lact&eacute;es.<br />
+                ** Conform&eacute;ment à la règlementation en vigueur.<br />
+                **** Un bol correspond à la quantit&eacute; indiqu&eacute;e au dos du produit.<br />
+            </p>
+        </div>
+    </div>
+</article>
+<style>
+
+@font-face {
+    font-family: Swiss721BT BoldRounded;
+    src: url(./fonts/UFONTS.COM_SWISS_721_BOLD_ROUNDED_BT.TTF);
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(./fonts/OpenSans-Regular_1.ttf);
+}
+
+@media (min-width: 481px) {
+
+    .products_detail_page {
+        position:relative;
+        width: 1000px;
+        height:483px;
+        margin: 0 auto;
+        border-bottom: 1px dashed #ee0690;
+    }
+
+    .products_detail_page .products_detail_section_img .products_detail_section_info_title_resp {
+        display:none;
+    }
+
+    .products_detail_page .products_detail_section_img {
+        display:inline-block;
+        position:absolute;
+        top:20px;
+        left:11px;
+        margin: 0;
+        max-width:310px;
+
+    }
+    .products_detail_page .products_detail_section_img img {
+        border-radius: 10px 10px 10px 10px;
+        display: block;
+        max-width:310px;
+        width: 100%;
+        height: auto;
+    }
+
+    .products_detail_page .products_detail_section_img .img-resp {
+        display: none;
+    }
+
+    .products_detail_page .products_detail_section_info {
+        width:658px;
+        height:440px;
+        display: inline-block;
+        position:absolute;
+        top:20px;
+        left:333px;
+
+    }
+
+    .products_detail_page .products_detail_section_info_title h3 {
+        font-family: "Swiss721BT BoldRounded",sans-serif;
+        color: #939496;
+        font-size: 24px;
+        font-style: normal;
+        margin: 0 0 25px 0;
+        padding: 0;
+
+    }
+
+    .products_detail_page .products_detail_section_info_text p {
+        font-family: "OpenSans",sans-serif;
+        color: #878889;
+        font-size: 13px;
+        font-style: normal;
+        margin: 19px 0 26px 3px;
+        padding: 0;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .products_detail_page {
+        border: none;
+        border-bottom: 1px dotted black;
+    }
+
+    .products_detail_page .products_detail_section_img .products_detail_section_info_title_resp {
+        display:block;
+        min-width: 150px;
+    }
+
+    .products_detail_page .products_detail_section_img {
+        width: 100%;
+        margin: 0;
+        max-width:440px;
+    }
+
+    .products_detail_page .products_detail_section_img img {
+        width: 100%;
+        max-width: 470px;
+        min-width: 340px;
+    }
+
+    .products_detail_page .products_detail_section_img .img-screen {
+        display: none;
+    }
+
+    .products_detail_page .products_detail_section_img .img-resp {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .products_detail_page .products_detail_section_info {
+        width: auto;
+        min-width: 340px;
+    }
+
+    .products_detail_page .products_detail_section_info .products_detail_section_info_title {
+        display:none;
+    }
+
+    .products_detail_page .products_detail_section_info_title h3 {
+        font-family: "Swiss721BT BoldRounded",sans-serif;
+        color: black;
+        font-size: 18px;
+        font-style: normal;
+        margin: 20px 0 25px 0;
+        padding: 0;
+
+    }
+
+    .products_detail_page .products_detail_section_info_text p {
+        font-family: "OpenSans",sans-serif;
+        color: black;
+        font-size: 14px;
+        font-style: normal;
+        margin: 19px 0 26px 3px;
+        padding: 0;
+    }
+
+}
+
+</style>

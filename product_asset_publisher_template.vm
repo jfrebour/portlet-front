@@ -1,0 +1,134 @@
+<div class="container-fluid">
+    <div class="container-inner clearfix">
+    	<article class="products_page">
+    		<div class="products_section">
+			    #if (!$entries.isEmpty()) 
+			        #foreach ($entry in $entries)
+			        #set ($assetRenderer=$entry.getAssetRenderer())
+			        #set ($viewURL = $assetPublisherHelper.getAssetViewURL($renderRequest, $renderResponse, $entry))
+			        
+			        #set ($article=$assetRenderer.getArticle())
+			        #set ($document = $saxReaderUtil.read($article.getContent())) 
+			        #set ($rootElement = $document.getRootElement())
+			        
+			        #set ($xPathSelector = $saxReaderUtil.createXPath("dynamic-element[@name='cta_url']") ) 
+			        #set ($ctaURLProduct = $xPathSelector.selectSingleNode($rootElement).getStringValue())
+			                
+			        #set ($xPathSelector = $saxReaderUtil.createXPath("dynamic-element[@name='title']") ) 
+			        #set ($titleProduct = $xPathSelector.selectSingleNode($rootElement).getStringValue())
+			        
+			        #set ($xPathSelector = $saxReaderUtil.createXPath("dynamic-element[@name='small_image']") ) 
+			        #set ($smallImageProduct = $xPathSelector.selectSingleNode($rootElement).getStringValue())
+			        
+			        #set ($xPathSelector = $saxReaderUtil.createXPath("dynamic-element[@name='abstract']") ) 
+			        #set ($abstractProduct = $xPathSelector.selectSingleNode($rootElement).getStringValue())
+			 
+					 <div class="products_section_title">
+			            <h4>
+			                $titleProduct
+			            </h4>
+			        </div>
+			        <div class="products_section_image">
+			            <div class="image-wrapper">
+			                <img src="$smallImageProduct" alt="Product Image" />
+			            </div>
+			        </div>
+			        <div class="products_section_text">
+			            <p>
+			                $abstractProduct
+			            </p>
+			        </div>
+			        <div class="products_section_button">
+			            <a class='moreInformations onClick' href='$ctaURLProduct'>En savoir plus</a>
+			        </div>
+			        
+			     	#end
+			    #end
+		    </div>
+		</article>
+    </div>
+</div>
+
+
+<style>
+.products_page {
+    margin: 0 auto;
+    max-width: 1007px;
+    padding: 0;
+    width: 100%;
+}
+
+.products_page .products_section {
+
+    /*display: inline-block;
+    width: 324px;
+    margin: 0 auto;
+    padding: 0;
+	margin: 0 4px;*/
+	
+	cursor: pointer;
+    float: left;
+    margin: 0 1.5% 25px;
+    width: 30.3333%;
+
+}
+
+.products_page .products_section .products_section_title {
+
+    font-family: "Swiss721BT BoldRounded",sans-serif;
+    color: #939496;
+    font-size: 16px;
+    font-style: normal;
+    
+}
+
+
+.products_page .products_section .products_section_title h4 {
+
+    text-align: center;
+
+}
+
+.products_page .products_section .products_section_image {
+
+    width:289px;
+    height:166px;
+    margin:auto;
+    position: relative;
+
+}
+
+.products_page .products_section .products_section_image .image-wrapper {
+
+    position:absolute;
+    width:100%;
+    bottom:0;
+    text-align:center;
+
+}
+
+.products_page .products_section .products_section_text {
+
+    width: 252px;
+    margin-left: 42px;
+    font-family: "OpenSans",sans-serif;
+    color: #666666;
+    font-size: 14px;
+    font-style: normal;
+
+}
+
+.products_page .products_section .products_section_button {
+
+
+
+}
+
+.products_page .products_section .products_section_button img {
+
+    display:block;
+    margin:auto;
+
+}
+
+</style>
