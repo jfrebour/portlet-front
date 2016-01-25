@@ -1,0 +1,270 @@
+html {
+	width: 100%;
+}
+body {
+	width:750px;
+	margin: 0 auto;
+}
+
+body .email-container {
+	width:727px;
+	padding: 37px 13px 10px 12px;
+}
+
+body .email-container .email-section-cover {
+        margin-bottom: 16px;
+}
+
+body .email-container .email-section-cover .email-logo {
+	height:53px;
+	margin-bottom:19px;
+}
+
+body .email-container .email-section-cover .email-logo #email-logo-bledina {
+	margin-top: 4px;
+	float:left;
+}
+
+body .email-container .email-section-cover .email-logo img {
+	height: 49px;
+}
+
+body .email-container .email-section-cover .email-logo #email-logo-bledima {
+	float:right;
+	margin-bottom: 4px;
+}
+
+body .email-container .email-section-cover .email-logo img {
+	height: 49px;
+}
+
+body .email-container .email-section-content {
+
+}
+
+body .email-container .email-section-content .email-section-text-fr {
+        margin-bottom: 20px;
+}
+
+body .email-container .email-section-content .email-section-text-fr h3 {
+        font-family: "Swiss721 BdRnd BT",sans-serif;
+        color: black;
+        font-size: 20px;
+        font-style: normal;
+        margin: 10px 0 10px 0;
+        padding: 0;
+}
+
+body .email-container .email-section-content .email-section-text-fr p {
+        font-family: "Swiss721 BdRnd BT",sans-serif;
+        color: black;
+        font-size: 14px;
+        font-style: bold;
+        margin: 12px 0 12px 0;
+        padding: 0;
+}
+
+body .email-container .email-section-content .email-separator {
+        width: 750px;
+        height:1px;
+        margin-left: -12px;
+        border-bottom: 1px dashed red;
+}
+
+body .email-container .email-section-content .email-section-text-ar {
+        direction: rtl; 
+        margin-top: 10px;
+        margin-bottom:121px;
+}
+
+body .email-container .email-section-content .email-section-text-ar h3 {
+        font-family: "Adobe Arabic";
+        color: black;
+        font-size: 21px;
+        font-style: normal;
+        margin: 18px 0 18px 0;
+        padding: 0;
+}
+
+body .email-container .email-section-content .email-section-text-ar p {
+        font-family: "Adobe Arabic";
+        color: black;
+        font-size: 18px;
+        font-style: normal;
+        margin: 14px 0 14px 0;
+        padding: 0;
+}
+
+body .email-container .email-section-content .email-section-content-contact {
+        width:100%;
+
+}
+
+body .email-container .email-section-content .email-section-content-contact .email-contact-info {
+        width:354px;
+        height:370px;
+        border: solid 2px #008f2f;
+        -webkit-border-radius: 8;
+        -moz-border-radius: 8;
+        border-radius: 8px;
+        margin: 0 auto;
+}
+
+body .email-container .email-section-content .email-section-content-contact .email-contact-info {
+        color:#e2007a;
+        text-align: center;
+}
+
+body .email-container .email-section-content .email-section-content-contact .email-contact-info .email-contact-info-logo {
+        margin-top: 18px;
+}
+
+body .email-container .email-section-content .email-section-content-contact .email-contact-info .email-contact-info-logo img {
+        display: block;
+        margin: 0 auto;
+}
+
+body .email-container .email-section-content .email-section-content-contact .email-contact-info .email-contact-info-text-fr {
+        margin-bottom: 26px;
+}
+
+body .email-container .email-section-content .email-section-content-contact .email-contact-info .email-contact-info-text-fr h3 {
+        font-family: "Swiss721 BdRnd BT",sans-serif;
+        font-size: 21.52px;
+        font-style: normal;
+        margin: 24px 0 0 0;
+        padding: 0;
+}
+
+body .email-container .email-section-content .email-section-content-contact .email-contact-info .email-contact-info-text-fr p {
+        font-family: "Swiss721 BdRnd BT",sans-serif;
+        font-size: 15.15px;
+        line-height: 150%;
+        font-style: bold;
+        margin: 0;
+        padding: 0;
+}
+
+body .email-container .email-section-content .email-section-content-contact .email-contact-info .email-contact-info-text-fr #email-contact-info-number {
+        font-family: "Swiss721 BdRnd BT",sans-serif;
+        font-size: 15.15px;
+        line-height: 0;
+        font-style: bold;
+        margin-top: -6px;
+        padding: 0;
+        position: relative;
+}
+
+body .email-container .email-section-content .email-section-content-contact .email-contact-info .email-contact-info-text-fr #email-contact-info-number img {
+        margin-bottom: -7px;
+}
+
+body .email-container .email-section-content .email-section-content-contact .email-contact-info #email-contact-separator {
+        height:1px;
+        border-bottom: 1px dashed #e2007a;
+        width:310px;
+        margin: 0 auto;
+}
+
+body .email-container .email-section-content .email-section-content-contact .email-contact-info .email-contact-info-text-ar h3 {
+        font-family: "Swiss721 BdRnd BT",sans-serif;
+        font-size: 21.51px;
+        font-style: normal;
+        margin: 12px 0 0 0;
+        padding: 0;
+        direction: rtl;
+}
+
+body .email-container .email-section-content .email-section-content-contact .email-contact-info .email-contact-info-text-ar p {
+        font-family: "Swiss721 BdRnd BT",sans-serif;
+        font-size: 15.15px;
+        line-height: 150%;
+        font-style: bold;
+        margin: 0;
+        padding: 0;
+        direction: rtl; 
+}
+
+body .email-container .email-section-content .email-section-content-contact .email-contact-info .email-contact-info-text-ar #email-contact-info-number-ar {
+        font-family: "Swiss721 BdRnd BT",sans-serif;
+        font-size: 15.15px;
+        line-height: 0;
+        font-style: bold;
+        margin-top: -6px;
+        padding: 0;
+        position: relative;
+        direction: ltr;
+}
+
+body .email-container .email-section-content .email-section-content-contact .email-contact-info .email-contact-info-text-ar #email-contact-info-number-ar img {
+        margin-bottom: -7px;
+}
+
+body .email-container .email-section-content .email-section-content-contact .email-contact-price {
+        text-align: center;
+        margin-top: 16px;
+}
+
+body .email-container .email-section-content .email-section-content-contact .email-contact-price .email-contact-price-fr {
+        font-family: "Swiss721 BdRnd BT",sans-serif;
+        font-size: 14.07px;
+        font-style: bold;
+        margin: 0;
+        padding: 0;
+
+}
+
+body .email-container .email-section-content .email-section-content-contact .email-contact-price .email-contact-price-ar {
+        font-family: "Swiss721 BdRnd BT",sans-serif;
+        font-size: 17.93px;
+        font-style: bold;
+        margin-top: 5px;
+        padding: 0;
+        direction: rtl;
+}
+
+body .email-container .email-section-footer {
+        margin-top: 40px;
+}
+
+body .email-container .email-section-footer .email-section-text-fr {
+        display: inline-block;
+        float:left;
+        font-family: "Swiss721 BdRnd BT",sans-serif;
+        font-size: 12px;
+        font-style: bold;
+        margin: 0;
+        padding: 0;
+}
+
+body .email-container .email-section-footer .email-section-text-fr a {
+        color:#e2007a;
+}
+
+body .email-container .email-section-footer .email-section-text-ar {
+        display: inline-block;
+        float:right;
+        direction:rtl;
+        font-family: "Swiss721 BdRnd BT",sans-serif;
+        font-size: 14px;
+        font-style: bold;
+        margin: 0;
+        padding: 0;
+        margin-top: -4px;
+}
+
+body .email-container .email-section-footer .email-section-text-ar a {
+        color:#e2007a;
+}
+
+
+
+
+
+
+
+
+
+
+
+

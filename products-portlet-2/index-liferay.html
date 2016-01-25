@@ -1,86 +1,65 @@
-<article class="products_p2_page">
-    <div class="products_p2_section">
-        <div class="products_p2_section_title">
-            <h4>
-                Lait de croissance
-            </h4>
-        </div>
-        <div class="products_p2_section_image">
-            <div class="image-wrapper">
-                <img class="products_portlet_2_desktop" src="img/bledina-1.png" alt="" />
-                <img class="products_portlet_2_resp" src="img/bledina-1.png" alt="" />
-            </div>
-        </div>
-        <div class="products_p2_section_text">
-            <p>
-                Entre 1 et 3 ans, si votre petit fut&eacute; a de plus en plus l&rsquo;air d&rsquo;un grand, ses besoins sont toujours sp&eacute;cifiques et il a encore besoin d&rsquo;un lait pas comme les autres !
-            </p>
-        </div>
-        <a href="#">
-            <div class="products_p2_section_button">
-                <div class="green_button" href="#">
-                    <p>
-                        En savoir plus
-                    </p>
-                </div>
-            </div>
-        </a>
+<div class="container-fluid">
+    <div class="container-inner clearfix">
+    	<article class="products_p2_page">
+    				#if (!$entries.isEmpty()) 
+			        #foreach ($entry in $entries)
+			        
+			        <div class="products_p2_section">
+
+				        #set ($assetRenderer=$entry.getAssetRenderer())
+				        #set ($viewURL = $assetPublisherHelper.getAssetViewURL($renderRequest, $renderResponse, $entry))
+				        
+				        #set ($article=$assetRenderer.getArticle())
+				        #set ($document = $saxReaderUtil.read($article.getContent())) 
+				        #set ($rootElement = $document.getRootElement())
+				        
+				        #set ($xPathSelector = $saxReaderUtil.createXPath("dynamic-element[@name='cta_url']") ) 
+				        #set ($ctaURLProduct = $xPathSelector.selectSingleNode($rootElement).getStringValue())
+				                
+				        #set ($xPathSelector = $saxReaderUtil.createXPath("dynamic-element[@name='title']") ) 
+				        #set ($titleProduct = $xPathSelector.selectSingleNode($rootElement).getStringValue())
+				        
+				        #set ($xPathSelector = $saxReaderUtil.createXPath("dynamic-element[@name='small_image']") ) 
+				        #set ($smallImageProduct = $xPathSelector.selectSingleNode($rootElement).getStringValue())
+				        
+				        #set ($xPathSelector = $saxReaderUtil.createXPath("dynamic-element[@name='abstract']") ) 
+				        #set ($abstractProduct = $xPathSelector.selectSingleNode($rootElement).getStringValue())
+				 		
+						 <div class="products_p2_section_title">
+				            <h4>
+				                $titleProduct
+				            </h4>
+				        </div>
+				        <div class="products_p2_section_image">
+				            <div class="image-wrapper">
+                        <img class="products_portlet_2_desktop" src="$smallImageProduct" alt="Product Image" />
+                        <img class="products_portlet_2_resp" src="$smallImageProduct" alt="Product Image" />
+				            </div>
+				        </div>
+				        <div class="products_p2_section_text">
+				            <p>
+				                $abstractProduct
+				            </p>
+				        </div>
+				        <a href="#">
+                      <div class="products_p2_section_button">
+                        <div class="green_button" href="#">
+                            <p>
+                                En savoir plus
+                            </p>
+                        </div>
+                      </div>
+                  </a>
+			        </div>
+			     	#end
+			    #end
+		    </div>
+
+		</article>
     </div>
-    <div class="products_p2_section">
-        <div class="products_p2_section_title">
-            <h4>
-                C&eacute;r&eacute;ales
-            </h4>
-        </div>
-        <div class="products_p2_section_image">
-            <div class="image-wrapper">
-                <img class="products_portlet_2_desktop" src="img/bledina-2.png" alt="" />
-                <img class="products_portlet_2_resp" src="img/bledina-2.png" alt="" />
-            </div>
-        </div>
-        <div class="products_p2_section_text">
-            <p>
-                A 6 mois, le lait maternel ne suffit plus pour couvrir les besoins nutritionnels de b&eacute;b&eacute;. C&rsquo;est le moment de se lancer en douceur dans la  diversification alimentaire..
-            </p>
-        </div>
-        <a href="#">
-            <div class="products_p2_section_button">
-                <div class="green_button" href="#">
-                    <p>
-                        En savoir plus
-                    </p>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="products_p2_section">
-        <div class="products_p2_section_title">
-            <h4>
-                Alimentation pour b&eacute;b&eacute;
-            </h4>
-        </div>
-        <div class="products_p2_section_image">
-            <div class="image-wrapper">
-                <img class="products_portlet_2_desktop" src="img/bledina-3.png" alt="" />
-                <img class="products_portlet_2_resp" src="img/bledina-3.png" alt="" />
-            </div>
-        </div>
-        <div class="products_p2_section_text">
-            <p>
-                Et une cuill&egrave;re pour papa, et une cuill&egrave;re pour maman ! Pour faire d&eacute;couvrir le go&ucirc;t des fruits et des l&eacute;gumes en douceur à b&eacute;b&eacute; et participer à son &eacute;veil sensoriel...
-            </p>
-        </div>
-        <a href="#">
-            <div class="products_p2_section_button">
-                <div class="green_button" href="#">
-                    <p>
-                        En savoir plus
-                    </p>
-                </div>
-            </div>
-        </a>
-    </div>
-</article>
+</div>
+
+
 <style>
 
 @media (min-width: 1000px) {
@@ -141,7 +120,8 @@
     .products_p2_page .products_p2_section .products_p2_section_image .image-wrapper {
 
         position:absolute;
-        width:100%;
+        height:166px;
+        width:324px;
         bottom:0;
         text-align:center;
 
@@ -149,6 +129,11 @@
 
     .products_p2_page .products_p2_section .products_p2_section_image .image-wrapper .products_portlet_2_resp {
         display: none;
+    }
+
+    .products_p2_page .products_p2_section .products_p2_section_image .image-wrapper img {
+        max-width: 100%;
+        max-height: 100% !important;
     }
 
     .products_p2_page .products_p2_section .products_p2_section_text {
@@ -273,7 +258,7 @@
     }
 
     .products_p2_page .products_p2_section .products_p2_section_image .image-wrapper {
-        width:100%;
+
         position:absolute;
         bottom:0;
         text-align:center;
@@ -285,7 +270,7 @@
     }
 
     .products_p2_page .products_p2_section .products_p2_section_image .image-wrapper img {
-        height:80%;
+        width:100%;
     }
 
     .products_p2_page .products_p2_section .products_p2_section_text {
@@ -487,5 +472,6 @@
         text-decoration: none;
     }
 }
+
 
 </style>

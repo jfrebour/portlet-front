@@ -1,18 +1,17 @@
-
 <article class="products_detail_p1_page">
     <div class="products_detail_p1_section_img">
         <div class="products_detail_p1_section_info_title_resp">
             <h3>
-                C&eacute;r&eacute;ales Bl&eacute;dine
+                $title.getData()
             </h3>
         </div>
-        <img src="img/product-image.png" class="img-screen" alt="" />
-        <img src="img/product-image-resp.png" class="img-resp" alt="" />
+        <img src="$detail_image.getData()" class="img-screen" alt="Detail Image" />
+        <img src="$detail_image.getData()" class="img-resp" alt="Detail Image" />
     </div>
     <div class="products_detail_p1_section_info">
         <div class="products_detail_p1_section_info_title">
             <h3>
-                C&eacute;r&eacute;ales Bl&eacute;dine
+                $title.getData()
             </h3>
         </div>
         <div class="products_detail_p1_section_info_text">
@@ -20,7 +19,7 @@
                 Les C&eacute;r&eacute;ales Bl&eacute;dine®, pour accompagner la croissance et l&#39;&eacute;veil de votre petit fut&eacute; !
                 <br />Pour continuer à faire d&eacute;couvrir de nouvelles textures et saveurs à votre bout&#39;chou, proposez-lui des recettes savoureuses Bl&eacute;dine ®. Avec ces diff&eacute;rentes vari&eacute;t&eacute;s, b&eacute;b&eacute; ne pourra être que ravi !
                 Les c&eacute;r&eacute;ales Bl&eacute;dine®, ce sont : <br />
-                • Des ingr&eacute;dients simples (des c&eacute;r&eacute;ales comme le bl&eacute; et le riz, des fruits et des l&eacute;gumes.) r&eacute;colt&eacute;s dans des champs <br /> et vergers rigoureusement s&eacute;lectionn&eacute;s.<br />
+                • Des ingr&eacute;dients simples (des c&eacute;r&eacute;ales comme le bl&eacute; et le riz, des fruits et des l&eacute;gumes.) r&eacute;colt&eacute;s dans des champs et vergers rigoureusement s&eacute;lectionn&eacute;s.<br />
                 • Une source d&#39;&eacute;nergie qui apporte les nutriments essentiels à b&eacute;b&eacute; jusqu&#39;à 3 ans  et notamment :<br />
                 - Du COMBIFER, une combinaison de Vitamines pour sa croissance et de Fer pour son d&eacute;veloppement c&eacute;r&eacute;bral<br />
                 - À teneur garantie en Vitamines (10 vitamines* essentielles dont A, C, D...)<br />
@@ -37,16 +36,6 @@
     <div style="clear:both"></div>
 </article>
 <style>
-
-@font-face {
-    font-family: Swiss721BT BoldRounded;
-    src: url(./fonts/UFONTS.COM_SWISS_721_BOLD_ROUNDED_BT.TTF);
-}
-
-@font-face {
-    font-family: OpenSans;
-    src: url(./fonts/OpenSans-Regular_1.ttf);
-}
 
 @media (min-width: 1000px) {
 
@@ -98,7 +87,7 @@
         color: #939496;
         font-size: 24px;
         font-style: normal;
-        margin: 0 0 25px 0;
+        margin: 0 0 12px 0;
         padding: 0;
 
     }
@@ -108,8 +97,9 @@
         color: #878889;
         font-size: 13px;
         font-style: normal;
-        margin: 19px 0 26px 3px;
+        margin: 0;
         padding: 0;
+        line-height:140%;
     }
 
 }
@@ -132,6 +122,7 @@
         display:inline-block;
         float:left;
         margin: 0;
+        margin-top: 15px;
         max-width:35%;
 
     }

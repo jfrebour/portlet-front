@@ -1,0 +1,805 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+
+    //global variables...
+    var item_width;
+    var left_value;
+
+    //put the values calculation needed for a responsive design in a function
+    function setCarousel() {
+
+        //set the correct size of the ul list
+        var ul_width = $('#product-carousel-slides').width() * 3;
+        $('#product-carousel-slides ul').css({'width' : ul_width});
+        
+        //set witdh of li
+        var li_width = ul_width / 3;
+        $('#product-carousel-slides li').css({'width' : li_width});
+
+        //grab the width and calculate left value
+        item_width = $('#product-carousel-slides li').outerWidth();
+        left_value = item_width * (-1);
+        
+        //set the default item to the correct position 
+        $('#product-carousel-slides ul').css({'left' : left_value});
+
+    }     
+
+    //move the last item before first item, just in case user click product-carousel-prev button
+    $('#product-carousel-slides li:first').before($('#product-carousel-slides li:last'));
+
+    //set the carousel var for first use
+    setCarousel();
+
+    //call the function anytime the screensize changes
+    $(window).resize(setCarousel);  
+
+    //if user clicked on product-carousel-prev button
+    $('#product-carousel-prev').click(function() {
+
+        //get the right position            
+        var left_indent = parseInt($('#product-carousel-slides ul').css('left')) + item_width;
+
+        //slide the item            
+        $('#product-carousel-slides ul').animate({'left' : left_indent}, 100,function(){    
+
+            //move the last item and put it as first item               
+            $('#product-carousel-slides li:first').before($('#product-carousel-slides li:last'));           
+
+            //set the default item to correct position
+            $('#product-carousel-slides ul').css({'left' : left_value});
+        
+        });
+
+        //cancel the link behavior            
+        return false;
+            
+    });
+
+ 
+    //if user clicked on product-carousel-next button
+    $('#product-carousel-next').click(function() {
+        
+        //get the right position
+        var left_indent = parseInt($('#product-carousel-slides ul').css('left')) - item_width;
+        
+        //slide the item
+        $('#product-carousel-slides ul').animate({'left' : left_indent}, 100, function () {
+            
+            //move the first item and put it as last item
+            $('#product-carousel-slides li:last').after($('#product-carousel-slides li:first'));                  
+            
+            //set the default item to correct position
+            $('#product-carousel-slides ul').css({'left' : left_value});
+        
+        });
+                 
+        //cancel the link behavior
+        return false;
+        
+    });
+        
+});
+
+</script>
+
+
+<article class="products_detail_p2_page">
+    <div class="products_detail_p2_section">
+        <div class="products_detail_p2_section_title">
+            <h4>
+                Lait de croissance
+            </h4>
+        </div>
+        <div class="products_detail_p2_section_image">
+            <div class="image-wrapper">
+                <img src="img/article.jpeg" alt="" />
+            </div>
+        </div>
+        <div class="products_detail_p2_section_text">
+            <p>
+                Entre 1 et 3 ans, si votre petit fut&eacute; a de plus en plus l&rsquo;air d&rsquo;un grand, ses besoins sont toujours sp&eacute;cifiques et il a encore besoin d&rsquo;un lait pas comme les autres !
+            </p>
+        </div>
+        <a href="#">
+            <div class="products_detail_p2_section_button">
+                <div class="green_button" href="#">
+                                    <p>
+                                        En savoir plus
+                                    </p>
+                                </div>
+            </div>
+        </a>
+    </div>
+    <div class="products_detail_p2_section">
+        <div class="products_detail_p2_section_title">
+            <h4>
+                C&eacute;r&eacute;ales
+            </h4>
+        </div>
+        <div class="products_detail_p2_section_image">
+            <div class="image-wrapper">
+                <img src="img/bledina-2.png" alt="" />
+            </div>
+        </div>
+        <div class="products_detail_p2_section_text">
+            <p>
+                A 6 mois, le lait maternel ne suffit plus pour couvrir les besoins nutritionnels de b&eacute;b&eacute;. C&rsquo;est le moment de se lancer en douceur dans la  diversification alimentaire..
+            </p>
+        </div>
+        <a href="#">
+            <div class="products_detail_p2_section_button">
+                <div class="green_button" href="#">
+                                    <p>
+                                        En savoir plus
+                                    </p>
+                                </div>
+            </div>
+        </a>
+    </div>
+    <div class="products_detail_p2_section">
+        <div class="products_detail_p2_section_title">
+            <h4>
+                Alimentation pour b&eacute;b&eacute;
+            </h4>
+        </div>
+        <div class="products_detail_p2_section_image">
+            <div class="image-wrapper">
+                <img src="img/bledina-3.png" alt="" />
+            </div>
+        </div>
+        <div class="products_detail_p2_section_text">
+            <p>
+                Et une cuill&egrave;re pour papa, et une cuill&egrave;re pour maman ! Pour faire d&eacute;couvrir le go&ucirc;t des fruits et des l&eacute;gumes en douceur à b&eacute;b&eacute; et participer à son &eacute;veil sensoriel...
+            </p>
+        </div>
+        <a href="#">
+            <div class="products_detail_p2_section_button">
+                <div class="green_button" href="#">
+                                    <p>
+                                        En savoir plus
+                                    </p>
+                                </div>
+            </div>
+        </a>
+    </div>
+</article>
+<article class="products_detail_p2_page_resp">
+    <div id="product-carousel">
+        <div id="product-carousel-buttons">
+            <div id="buttons-wrapper">
+                <a href="#" id="product-carousel-prev">product-carousel-prev</a>
+                <a href="#" id="product-carousel-next">product-carousel-next</a>
+                <div class="clear"></div>
+            </div>
+        </div>
+        
+        <div class="clear"></div>
+
+        <div id="product-carousel-slides"> 
+            <ul>
+                <li>
+                    
+                    <div class="products_detail_p2_section">
+                        <div class="products_detail_p2_section_title">
+                            <h4>
+                                Lait de croissance
+                            </h4>
+                        </div>
+                        <div class="products_detail_p2_section_image">
+                            <div class="image-wrapper">
+                                <img src="img/bledina-1.png" alt="" />
+                            </div>
+                        </div>
+                        <div class="products_detail_p2_section_text">
+                            <p>
+                                Entre 1 et 3 ans, si votre petit fut&eacute; a de plus en plus l&rsquo;air d&rsquo;un grand, ses besoins sont toujours sp&eacute;cifiques et il a encore besoin d&rsquo;un lait pas comme les autres !
+                            </p>
+                        </div>
+                        <a href="#">
+                            <div class="products_detail_p2_section_button">
+                                <div class="green_button" href="#">
+                                    <p>
+                                        En savoir plus
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </li>
+                <li>
+
+                    <div class="products_detail_p2_section">
+                            <div class="products_detail_p2_section_title">
+                                <h4>
+                                    C&eacute;r&eacute;ales
+                                </h4>
+                            </div>
+                            <div class="products_detail_p2_section_image">
+                                <div class="image-wrapper">
+                                    <img src="img/bledina-2.png" alt="" />
+                                </div>
+                            </div>
+                            <div class="products_detail_p2_section_text">
+                                <p>
+                                    A 6 mois, le lait maternel ne suffit plus pour couvrir les besoins nutritionnels de b&eacute;b&eacute;. C&rsquo;est le moment de se lancer en douceur dans la  diversification alimentaire..
+                                </p>
+                            </div>
+                            <a href="#">
+                                <div class="products_detail_p2_section_button">
+                                    <div class="green_button" href="#">
+                                        <p>
+                                            En savoir plus
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                    </div>
+
+
+                </li>
+                <li>
+
+
+                    <div class="products_detail_p2_section">
+                        <div class="products_detail_p2_section_title">
+                            <h4>
+                                Alimentation pour b&eacute;b&eacute;
+                            </h4>
+                        </div>
+                        <div class="products_detail_p2_section_image">
+                            <div class="image-wrapper">
+                                <img src="img/bledina-3.png" alt="" />
+                            </div>
+                        </div>
+                        <div class="products_detail_p2_section_text">
+                            <p>
+                                Et une cuill&egrave;re pour papa, et une cuill&egrave;re pour maman ! Pour faire d&eacute;couvrir le go&ucirc;t des fruits et des l&eacute;gumes en douceur à b&eacute;b&eacute; et participer à son &eacute;veil sensoriel...
+                            </p>
+                        </div>
+                        <a href="#">
+                            <div class="products_detail_p2_section_button">
+                                <div class="green_button" href="#">
+                                    <p>
+                                        En savoir plus
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
+
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+
+    </div>
+</article>
+<style>
+
+@media (min-width: 1000px) {
+
+    .products_detail_p2_page {
+        margin: 0 auto;
+        padding: 0;
+        width: 1000px;
+        height:348px;
+    }
+
+    .products_detail_p2_page .products_detail_p2_section {
+
+        display: inline-block;
+        width: 324px;
+        height:348px;
+        margin: 0 auto;
+        padding: 0;
+        margin: 0;
+        position:relative;
+        /*float: left;
+        margin: 0 1.5% 25px;
+        width: 30.3333%;
+        cursor: pointer;*/
+
+    }
+
+    .products_detail_p2_page .products_detail_p2_section .products_detail_p2_section_title {
+
+        font-family: "Swiss721BT BoldRounded",sans-serif;
+        color: #939496;
+        font-size: 16px;
+        font-style: normal;
+        display: block;
+        width:100%;
+        position:absolute;
+        bottom: 314px;
+        
+    }
+
+
+    .products_detail_p2_page .products_detail_p2_section .products_detail_p2_section_title h4 {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+
+    }
+
+    .products_detail_p2_page .products_detail_p2_section .products_detail_p2_section_image {
+        width:100%;
+        height:166px;
+        display: block;
+        margin:auto;
+        position: absolute;
+        bottom: 135px;
+    }
+
+    .products_detail_p2_page .products_detail_p2_section .products_detail_p2_section_image .image-wrapper {
+
+        position:absolute;
+        height:166px;
+        width:324px;
+        bottom:0;
+        text-align:center;
+
+    }
+
+    .products_detail_p2_page .products_detail_p2_section .products_detail_p2_section_image .image-wrapper img {
+        max-width: 100%;
+        max-height: 100% !important;
+    }
+
+    .products_detail_p2_page .products_detail_p2_section .products_detail_p2_section_text {
+
+        width: 250px;
+        margin-left: 42px;
+        font-family: "OpenSans",sans-serif;
+        color: #666666;
+        font-size: 12px;
+        font-style: normal;
+        position:absolute;
+        top:210px;
+
+    }
+
+    .products_detail_p2_page .products_detail_p2_section .products_detail_p2_section_text p {
+        line-height: 130%;
+    }
+
+    .products_detail_p2_page .products_detail_p2_section a {
+        display:block;
+        margin:0 auto;
+        width:238px;
+        position: absolute;
+        bottom: 15px;
+        left:34px;
+    }
+
+    .products_detail_p2_page .products_detail_p2_section .products_detail_p2_section_button {
+      display:inline-block;
+      width:238px;
+      height:36px;
+      background: #336600;
+      background-image: -webkit-linear-gradient(top, #336600, #339900);
+      background-image: -moz-linear-gradient(top, #336600, #339900);
+      background-image: -ms-linear-gradient(top, #336600, #339900);
+      background-image: -o-linear-gradient(top, #336600, #339900);
+      background-image: linear-gradient(to bottom, #336600, #339900);
+      -webkit-border-radius: 8;
+      -moz-border-radius: 8;
+      border-radius: 8px;
+      -webkit-box-shadow: 0px -1px 3px #c2d6b8;
+      -moz-box-shadow: 0px -1px 3px #c2d6b8;
+      box-shadow: 0px -1px 3px #c2d6b8;
+      position:relative;
+    }
+
+    .products_detail_p2_page .products_detail_p2_section .products_detail_p2_section_button .green_button {
+
+      font-family: "OpenSans",sans-serif;
+      color: #ffffff;
+      font-size: 15px;
+      text-decoration: none;
+      position:absolute;
+      top:8px;
+      left:76px;
+    }
+
+    .products_detail_p2_page .products_detail_p2_section .products_detail_p2_section_button .green_button p {
+        margin: 0;
+    }
+
+    .products_detail_p2_page .products_detail_p2_section .products_detail_p2_section_button .green_button:hover {
+        text-decoration: none;
+
+    }
+
+    .products_detail_p2_page_resp {
+        display: none;    
+    }
+
+}
+
+@media (min-width: 481px) and (max-width:999px) {
+
+    .products_detail_p2_page {
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+        min-width: 700px;
+        height:348px;
+    }
+
+    .products_detail_p2_page .products_detail_p2_section {
+
+        display: inline-block;
+        /*width: 324px;
+        height:348px;*/
+        /*margin: 0 auto;*/
+        /*padding: 0;
+        margin: 0;
+        position:relative;*/
+        float: left;
+        margin: 0 1.5% 25px;
+        width: 30.3333%;
+        height:100%;
+        position:relative;
+
+    }
+
+    .products_detail_p2_page .products_detail_p2_section .products_detail_p2_section_title {
+
+        font-family: "Swiss721BT BoldRounded",sans-serif;
+        color: #939496;
+        font-size: 16px;
+        font-style: normal;
+        display: block;
+        width:100%;
+        
+    }
+
+
+    .products_detail_p2_page .products_detail_p2_section .products_detail_p2_section_title h4 {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+
+    }
+
+    .products_detail_p2_page .products_detail_p2_section .products_detail_p2_section_image {
+        width:100%;
+        height:166px;
+        position:relative;
+        display: block;
+        margin:auto;
+    }
+
+    .products_detail_p2_page .products_detail_p2_section .products_detail_p2_section_image .image-wrapper {
+
+        position:absolute;
+        width:100%;
+        bottom:0;
+        text-align:center;
+
+    }
+
+    .products_detail_p2_page .products_detail_p2_section .products_detail_p2_section_image .image-wrapper img {
+        height:80%;
+    }
+
+    .products_detail_p2_page .products_detail_p2_section .products_detail_p2_section_text {
+
+        width: 90%;
+        margin-left: 15%;
+        font-family: "OpenSans",sans-serif;
+        color: #666666;
+        font-size: 12px;
+        font-style: normal;
+        /*position:absolute;
+        top:210px;*/
+
+    }
+
+    .products_detail_p2_page .products_detail_p2_section .products_detail_p2_section_text p {
+        line-height: 130%;
+    }
+
+    .products_detail_p2_page .products_detail_p2_section a {
+        display:block;
+        margin:0 auto;
+        width:79%;
+        /*position: absolute;
+        bottom: 15px;
+        left:34px;*/
+    }
+
+    .products_detail_p2_page .products_detail_p2_section .products_detail_p2_section_button {
+      display:inline-block;
+      width:100%;
+      height:36px;
+      background: #336600;
+      background-image: -webkit-linear-gradient(top, #336600, #339900);
+      background-image: -moz-linear-gradient(top, #336600, #339900);
+      background-image: -ms-linear-gradient(top, #336600, #339900);
+      background-image: -o-linear-gradient(top, #336600, #339900);
+      background-image: linear-gradient(to bottom, #336600, #339900);
+      -webkit-border-radius: 8;
+      -moz-border-radius: 8;
+      border-radius: 8px;
+      -webkit-box-shadow: 0px -1px 3px #c2d6b8;
+      -moz-box-shadow: 0px -1px 3px #c2d6b8;
+      box-shadow: 0px -1px 3px #c2d6b8;
+      position:relative;
+    }
+
+    .products_detail_p2_page .products_detail_p2_section .products_detail_p2_section_button .green_button {
+
+      font-family: "OpenSans",sans-serif;
+      color: #ffffff;
+      font-size: 15px;
+      text-decoration: none;
+      position:absolute;
+      top:8px;
+      left:50%;
+    }
+
+    .products_detail_p2_page .products_detail_p2_section .products_detail_p2_section_button .green_button p {
+
+        margin: 0;
+        margin-left:-48.3px;
+
+    }
+
+    .products_detail_p2_page .products_detail_p2_section .products_detail_p2_section_button .green_button:hover {
+        text-decoration: none;
+
+    }
+
+    .products_detail_p2_page_resp {
+        display: none;    
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .products_detail_p2_page {
+        display: none;
+        min-width: 305px;
+        margin: 0 auto;
+        max-width: 1007px;
+        padding: 0;
+        width: 100%;
+    }
+
+    .products_detail_p2_page_resp {
+        min-width:350px;
+        border-top: 1px dotted black;
+    }
+
+    .products_detail_p2_page_resp #product-carousel #product-carousel-slides ul li .products_detail_p2_section {
+
+        display: inline-block;
+        margin: 0 auto;
+        margin-bottom: 24px;
+        padding: 0;
+        width:100%;
+        /*border-top: 1px dotted #ee0690;*/
+        /*float: left;
+        margin: 0 1.5% 25px;
+        width: 30.3333%;
+        cursor: pointer;*/
+
+    }
+
+    .products_detail_p2_page_resp #product-carousel #product-carousel-slides ul li .products_detail_p2_section .products_detail_p2_section_title {
+
+        font-family: "Swiss721BT BoldRounded",sans-serif;
+        color: black;
+        font-size: 16px;
+        font-style: normal;
+        margin: 21px 0;
+        
+    }
+
+
+    .products_detail_p2_page_resp #product-carousel #product-carousel-slides ul li .products_detail_p2_section .products_detail_p2_section_title h4 {
+        text-align: center;
+    }
+
+    .products_detail_p2_page_resp #product-carousel #product-carousel-slides ul li .products_detail_p2_section .products_detail_p2_section_image {
+        width:289px;
+        height:166px;
+        margin:auto;
+        position: relative;
+    }
+
+
+    .products_detail_p2_page_resp #product-carousel #product-carousel-slides ul li .products_detail_p2_section .products_detail_p2_section_text {
+
+        width: 250px;
+        font-family: "OpenSans",sans-serif;
+        color: black;
+        font-size: 12px;
+        font-style: normal;
+
+    }
+
+    .products_detail_p2_page_resp #product-carousel #product-carousel-slides ul li .products_detail_p2_section .products_detail_p2_section_text p {
+        line-height: 130%;
+    }
+
+
+    .products_detail_p2_page_resp #product-carousel #product-carousel-slides ul li .products_detail_p2_section .products_detail_p2_section_image .image-wrapper {
+
+        position:absolute;
+        width:100%;
+        bottom:0;
+        text-align:center;
+
+    }
+
+    .products_detail_p2_page_resp #product-carousel #product-carousel-slides ul li .products_detail_p2_section .products_detail_p2_section_image .image-wrapper img {
+
+
+    }
+
+    .products_detail_p2_page_resp #product-carousel #product-carousel-slides ul li .products_detail_p2_section .products_detail_p2_section_text {
+
+        width: 95%;
+        word-spacing: 3px;
+        font-family: "OpenSans",sans-serif;
+        color: black;
+        font-size: 12px;
+        font-style: normal;
+        position:relative;
+        margin: 0 auto;
+        margin-bottom: 28px;
+
+    }
+
+    .products_detail_p2_page_resp #product-carousel #product-carousel-slides ul li .products_detail_p2_section a {
+        display:block;
+        margin:0 auto;
+        width:83%;
+    }
+
+    .products_detail_p2_page_resp #product-carousel #product-carousel-slides ul li .products_detail_p2_section .products_detail_p2_section_button {
+      display:inline-block;
+      width:100%;
+      height:36px;
+      background: #336600;
+      background-image: -webkit-linear-gradient(top, #336600, #339900);
+      background-image: -moz-linear-gradient(top, #336600, #339900);
+      background-image: -ms-linear-gradient(top, #336600, #339900);
+      background-image: -o-linear-gradient(top, #336600, #339900);
+      background-image: linear-gradient(to bottom, #336600, #339900);
+      -webkit-border-radius: 8;
+      -moz-border-radius: 8;
+      border-radius: 8px;
+      -webkit-box-shadow: 0px -1px 3px #c2d6b8;
+      -moz-box-shadow: 0px -1px 3px #c2d6b8;
+      box-shadow: 0px -1px 3px #c2d6b8;
+      position:relative;
+
+      
+    }
+
+    .products_detail_p2_page_resp #product-carousel #product-carousel-slides ul li .products_detail_p2_section .products_detail_p2_section_button .green_button {
+      font-family: "OpenSans",sans-serif;
+      color: black;
+      font-size: 15px;
+      text-decoration: none;
+      position:absolute;
+      top:8px;
+      left:50%;
+    }
+
+    .products_detail_p2_page_resp #product-carousel #product-carousel-slides ul li .products_detail_p2_section .products_detail_p2_section_button .green_button p {
+        margin: 0;
+        margin-left:-48.3px;
+    }
+
+    .products_detail_p2_page_resp #product-carousel #product-carousel-slides ul li .products_detail_p2_section .products_detail_p2_section_button .green_button:hover {
+        text-decoration: none;
+    }
+
+
+    /* ----------------------
+        CAROUSEL
+    ------------------------- */
+
+    #product-carousel {
+    width:100%;
+    height:412px;
+    margin:0 auto;
+    position:relative;
+    }
+
+    #product-carousel-slides {
+        overflow:hidden;
+        /* fix ie overflow issue */
+        position:relative;
+        width:100%;
+        height:100%;
+    }
+ 
+    #product-carousel-slides ul {
+        position:relative;
+        left:0;
+        top:0;
+        list-style:none;
+        margin:0;
+        padding:0;
+    }
+
+    #product-carousel-slides li {
+        height:412px;   
+        float:left;
+    }
+
+    #product-carousel-buttons {
+        padding:0;  
+        float:right;
+        position:absolute;
+        top:0;
+        left:0;
+        z-index: 10;
+        width:100%;
+        height:75%;
+    }
+
+    #buttons-wrapper {
+        position:relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    #product-carousel-buttons a {
+        display:block; 
+        width:15px; 
+        height:16px;
+        text-indent:-999em;
+        float:left;
+        outline:0;
+
+    }
+
+    #product-carousel-prev {
+        position:absolute;
+        top:144px;
+        left:0;
+    }
+
+    #product-carousel-next {
+        position: absolute;
+        top:144px;
+        right: 0;
+    }
+
+
+
+    a#product-carousel-prev {
+        background:url(http://localhost:8080/html/themes/classic/images/arrows/13_left.png) 0 -25px no-repeat; 
+    }
+
+    /*a#product-carousel-prev:hover {
+        background:url(arrow.gif) 0 0 no-repeat;
+    }*/
+
+    a#product-carousel-next {
+        background:url(http://localhost:8080/html/themes/classic/images/arrows/13_left.png) 0 -5px no-repeat; 
+    }
+
+    /*a#product-carousel-next:hover {
+        background:url(arrow.gif) -32px 0 no-repeat;
+    }*/
+
+    .clear {clear:both}
+
+
+}
+
+</style>

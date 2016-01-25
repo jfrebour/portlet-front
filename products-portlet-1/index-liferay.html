@@ -1,15 +1,15 @@
 <article class="products_p1_page">
     <div class="products_p1_section_title">
         <h3>
-            Produits
+            $title.getData()
         </h3>
     </div>
     <div class="products_p1_section_img">
-        <img src="img/big-image.png" alt="" />
+        <img src="$image.getData()" alt="Product" />
     </div>
     <div class="products_p1_section_text">
         <p>
-            D&eacute;couvrez notre gamme de produits une gamme de produits compl&egrave;te pour accompagner la croissance et le d&eacute;veloppement c&eacute;r&eacute;bral de votre petit fut&eacute; d&egrave;s 6 mois.
+            $body.getData()
         </p>
     </div>
 </article>
@@ -36,8 +36,6 @@
 }
 .products_p1_page .products_p1_section_img img {
     border-radius: 10px 10px 10px 10px;
-    width: 100%;
-    height: auto;
 }
 
 .products_p1_page .products_p1_section_text p {
@@ -48,31 +46,6 @@
     line-height: 1.85;
     margin: 19px 0 26px 3px;
     padding: 0;
-}
-
-@media (max-width: 480px) {
-
-    .products_p1_page .products_p1_section_title h3 {
-
-    font-family: "Swiss721BT BoldRounded",sans-serif;
-    color: #939496;
-    font-size: 22px;
-    font-style: normal;
-    margin: 16px 0 17px 10px;
-    padding: 0;
-
-    }
-
-    .products_p1_page .products_p1_section_text p {
-    font-family: "OpenSans",sans-serif;
-    color: #666666;
-    font-size: 12px;
-    font-style: normal;
-    line-height: 1.85;
-    margin: 19px 0 26px 3px;
-    padding: 0;
-}
-
 }
 
 </style>
