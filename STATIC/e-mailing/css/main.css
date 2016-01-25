@@ -1,14 +1,37 @@
+@font-face {
+    font-family: Frutiger LT Arabic Light;
+    src: url(../fonts/FrutigerLTArabic-45Light_4.ttf);
+}
+
+@font-face {
+    font-family: Frutiger LT Arabic Bold;
+    src: url(../fonts/FrutigerLTArabic-65Bold_2.ttf);
+}
+
+@font-face {
+    font-family: Frutiger LT Arabic Black;
+    src: url(../fonts/FrutigerLTArabic-75Black_2.ttf);
+}
+
+@font-face {
+    font-family: Swis721 BdRnd BT;
+    src: url(../fonts/UFONTS.COM_SWISS_721_BOLD_ROUNDED_BT.TTF);
+}
+
 html {
-	width: 100%;
+        width: 100%;
 }
 body {
-	width:750px;
-	margin: 0 auto;
+        max-width: 750px;
+        min-width: 470px;
+        width:100%;
+        margin: 0 auto;
 }
 
 body .email-container {
-	width:727px;
-	padding: 37px 13px 10px 12px;
+        width:727px;
+        width: 96.93%;
+        padding: 37px 13px 10px 12px;
 }
 
 body .email-container .email-section-cover {
@@ -16,26 +39,30 @@ body .email-container .email-section-cover {
 }
 
 body .email-container .email-section-cover .email-logo {
-	height:53px;
-	margin-bottom:19px;
+        height:53px;
+        margin-bottom:19px;
 }
 
 body .email-container .email-section-cover .email-logo #email-logo-bledina {
-	margin-top: 4px;
-	float:left;
+        margin-top: 4px;
+        float:left;
 }
 
 body .email-container .email-section-cover .email-logo img {
-	height: 49px;
+        height: 49px;
 }
 
 body .email-container .email-section-cover .email-logo #email-logo-bledima {
-	float:right;
-	margin-bottom: 4px;
+        float:right;
+        margin-bottom: 4px;
 }
 
 body .email-container .email-section-cover .email-logo img {
-	height: 49px;
+        height: 49px;
+}
+
+body .email-container .email-section-cover .email-cover img {
+        width:100%;
 }
 
 body .email-container .email-section-content {
@@ -43,23 +70,21 @@ body .email-container .email-section-content {
 }
 
 body .email-container .email-section-content .email-section-text-fr {
-        margin-bottom: 20px;
+        margin-bottom: 25px;
 }
 
 body .email-container .email-section-content .email-section-text-fr h3 {
-        font-family: "Swiss721 BdRnd BT",sans-serif;
+        font-family: Swis721 BdRnd BT;
         color: black;
         font-size: 20px;
-        font-style: normal;
         margin: 10px 0 10px 0;
         padding: 0;
 }
 
 body .email-container .email-section-content .email-section-text-fr p {
-        font-family: "Swiss721 BdRnd BT",sans-serif;
+        font-family: Swis721 BdRnd BT;
         color: black;
         font-size: 14px;
-        font-style: bold;
         margin: 12px 0 12px 0;
         padding: 0;
 }
@@ -74,23 +99,23 @@ body .email-container .email-section-content .email-separator {
 body .email-container .email-section-content .email-section-text-ar {
         direction: rtl; 
         margin-top: 10px;
-        margin-bottom:121px;
+        margin-bottom:42px;
 }
 
 body .email-container .email-section-content .email-section-text-ar h3 {
-        font-family: "Adobe Arabic";
+        font-family: Frutiger LT Arabic Bold;
         color: black;
+        line-height: 130%;
         font-size: 21px;
-        font-style: normal;
         margin: 18px 0 18px 0;
         padding: 0;
 }
 
 body .email-container .email-section-content .email-section-text-ar p {
-        font-family: "Adobe Arabic";
+        font-family: Frutiger LT Arabic Light;
         color: black;
         font-size: 18px;
-        font-style: normal;
+        line-height:125%;
         margin: 14px 0 14px 0;
         padding: 0;
 }
@@ -129,15 +154,15 @@ body .email-container .email-section-content .email-section-content-contact .ema
 }
 
 body .email-container .email-section-content .email-section-content-contact .email-contact-info .email-contact-info-text-fr h3 {
-        font-family: "Swiss721 BdRnd BT",sans-serif;
+        font-family: Swis721 BdRnd BT;
         font-size: 21.52px;
         font-style: normal;
-        margin: 24px 0 0 0;
+        margin: 15px 0 0 0;
         padding: 0;
 }
 
 body .email-container .email-section-content .email-section-content-contact .email-contact-info .email-contact-info-text-fr p {
-        font-family: "Swiss721 BdRnd BT",sans-serif;
+        font-family: Swis721 BdRnd BT;
         font-size: 15.15px;
         line-height: 150%;
         font-style: bold;
@@ -146,7 +171,7 @@ body .email-container .email-section-content .email-section-content-contact .ema
 }
 
 body .email-container .email-section-content .email-section-content-contact .email-contact-info .email-contact-info-text-fr #email-contact-info-number {
-        font-family: "Swiss721 BdRnd BT",sans-serif;
+        font-family: Swis721 BdRnd BT;
         font-size: 15.15px;
         line-height: 0;
         font-style: bold;
@@ -167,16 +192,15 @@ body .email-container .email-section-content .email-section-content-contact .ema
 }
 
 body .email-container .email-section-content .email-section-content-contact .email-contact-info .email-contact-info-text-ar h3 {
-        font-family: "Swiss721 BdRnd BT",sans-serif;
+        font-family: Frutiger LT Arabic Black;
         font-size: 21.51px;
-        font-style: normal;
-        margin: 12px 0 0 0;
+        margin: 0 0 0 0;
         padding: 0;
         direction: rtl;
 }
 
 body .email-container .email-section-content .email-section-content-contact .email-contact-info .email-contact-info-text-ar p {
-        font-family: "Swiss721 BdRnd BT",sans-serif;
+        font-family: Frutiger LT Arabic Bold;
         font-size: 15.15px;
         line-height: 150%;
         font-style: bold;
@@ -186,10 +210,9 @@ body .email-container .email-section-content .email-section-content-contact .ema
 }
 
 body .email-container .email-section-content .email-section-content-contact .email-contact-info .email-contact-info-text-ar #email-contact-info-number-ar {
-        font-family: "Swiss721 BdRnd BT",sans-serif;
+        font-family: Swis721 BdRnd BT;
         font-size: 15.15px;
         line-height: 0;
-        font-style: bold;
         margin-top: -6px;
         padding: 0;
         position: relative;
@@ -206,54 +229,50 @@ body .email-container .email-section-content .email-section-content-contact .ema
 }
 
 body .email-container .email-section-content .email-section-content-contact .email-contact-price .email-contact-price-fr {
-        font-family: "Swiss721 BdRnd BT",sans-serif;
+        font-family: Swis721 BdRnd BT;
         font-size: 14.07px;
-        font-style: bold;
         margin: 0;
         padding: 0;
 
 }
 
 body .email-container .email-section-content .email-section-content-contact .email-contact-price .email-contact-price-ar {
-        font-family: "Swiss721 BdRnd BT",sans-serif;
+        font-family: Frutiger LT Arabic Bold;
         font-size: 17.93px;
-        font-style: bold;
-        margin-top: 5px;
+        margin-top: 0;
         padding: 0;
         direction: rtl;
 }
 
 body .email-container .email-section-footer {
-        margin-top: 40px;
+        margin-top: 25px;
 }
 
-body .email-container .email-section-footer .email-section-text-fr {
+body .email-container .email-section-footer .email-section-footer-text-fr {
         display: inline-block;
         float:left;
-        font-family: "Swiss721 BdRnd BT",sans-serif;
+        font-family: Frutiger LT Arabic Bold;
         font-size: 12px;
-        font-style: bold;
         margin: 0;
         padding: 0;
 }
 
-body .email-container .email-section-footer .email-section-text-fr a {
+body .email-container .email-section-footer .email-section-footer-text-fr a {
         color:#e2007a;
 }
 
-body .email-container .email-section-footer .email-section-text-ar {
+body .email-container .email-section-footer .email-section-footer-text-ar {
         display: inline-block;
         float:right;
         direction:rtl;
-        font-family: "Swiss721 BdRnd BT",sans-serif;
+        font-family: Frutiger LT Arabic Light;
         font-size: 14px;
-        font-style: bold;
         margin: 0;
         padding: 0;
         margin-top: -4px;
 }
 
-body .email-container .email-section-footer .email-section-text-ar a {
+body .email-container .email-section-footer .email-section-footer-text-ar a {
         color:#e2007a;
 }
 
