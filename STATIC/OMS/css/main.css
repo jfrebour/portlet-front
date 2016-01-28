@@ -158,11 +158,12 @@ body .oms-container .oms-content .oms-content-separator table tbody tr td {
 }
 
 body .oms-container .oms-content .oms-content-separator table tbody tr td hr {
-    background-image: -webkit-linear-gradient(top,transparent,white,transparent);
+    
+    background-image: -webkit-linear-gradient(top,rgba(255, 255, 255, 0),white,rgba(255, 255, 255, 0));
     background-image: -moz-linear-gradient(top,transparent,white,transparent);
     background-image: -ms-linear-gradient(top,transparent,white,transparent);
     background-image: -o-linear-gradient(top,transparent,white,transparent);
-    background-image: linear-gradient(top,transparent,white,transparent);
+    background-image: linear-gradient(to bottom,rgba(255, 255, 255, 0),white,rgba(255, 255, 255, 0));
 
     border : 0;
     margin:0;
