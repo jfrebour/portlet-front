@@ -1,0 +1,406 @@
+@font-face {
+    font-family: Frutiger LT Arabic Light;
+    src: url(../fonts/FrutigerLTArabic-45Light_4.ttf);
+}
+
+@font-face {
+    font-family: Frutiger LT Arabic Roman;
+    src: url(../fonts/FrutigerLTArabic-55Roman.ttf);
+}
+
+@font-face {
+    font-family: Frutiger LT Arabic Bold;
+    src: url(../fonts/FrutigerLTArabic-65Bold_2.ttf);
+}
+
+@font-face {
+    font-family: Frutiger LT Arabic Black;
+    src: url(../fonts/FrutigerLTArabic-75Black_2.ttf);
+}
+
+@font-face {
+    font-family: Swis721 BdRnd BT;
+    src: url(../fonts/UFONTS.COM_SWISS_721_BOLD_ROUNDED_BT.TTF);
+}
+
+html {
+        width: 100%;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+}
+body {
+        width:100%;
+        height:100%;
+        margin: 0 auto;
+   /*     background-color: #036d2a;*/
+        position:relative;
+        background-color: #036d2a;
+        background-image:url(../img/background.png);
+        background-repeat: repeat-x;
+        background-origin: content-box;
+}
+
+
+
+/* -------------------------------------
+    Container
+    ------------------------------------ */
+
+body .oms-container {
+        width:1000px;
+        margin: 0 auto;
+        padding-top: 69px;
+}
+
+body .oms-container .oms-cover {
+    margin:0;
+}
+
+body .oms-container .oms-cover img {
+    display:block;
+    margin: 0 auto;
+}
+
+
+/* -------------------------------------
+    Title
+    ------------------------------------ */
+
+body .oms-container .oms-title {
+    width:100%;
+    margin-top:94px;
+    text-align: center;
+}
+
+body .oms-container .oms-title .oms-title-fr {
+    width:500px;
+    float:left;
+}
+
+body .oms-container .oms-title .oms-title-fr h3 {
+    margin:31px 0;
+    color: #f6ff00;
+    font-family: "Arial";
+    font-size: 24px;
+}
+
+body .oms-container .oms-title .oms-title-ar {
+    width:499px;
+    float:left;
+}
+
+body .oms-container .oms-title .oms-title-ar h3 {
+    margin:15px 0 31px 0;
+    font-family: Frutiger LT Arabic Roman;
+    font-size: 28px;
+    color: #f6ff00;
+    direction: rtl;
+}
+
+
+
+/* -------------------------------------
+    Content
+    ------------------------------------ */
+
+
+body .oms-container .oms-content {
+    width:100%;
+    text-align: center;
+}
+
+
+
+/* ---- FR ---- */
+
+body .oms-container .oms-content .oms-content-fr {
+    width:500px;
+    float:left;
+    margin-top: -25px;
+}
+
+body .oms-container .oms-content .oms-content-fr p {
+    margin-top:22px;
+    margin-left: 22px;
+    margin-right:28px;
+    color:white;
+    font-family: "Arial";
+    font-size: 13px;
+    text-align: justify;
+    line-height: 180%;
+}
+
+
+
+/* ---- SEPARATOR ---- */
+
+body .oms-container .oms-content .oms-content-separator {
+    height:100%;
+    width:1px;
+    float: left;
+    margin-top:35px;
+}
+
+body .oms-container .oms-content .oms-content-separator table {
+    height:100%;
+    width: 1px;
+    border-spacing: 0;
+}
+
+body .oms-container .oms-content .oms-content-separator table tbody tr td {
+    height:100%;
+    padding: 0;
+}
+
+body .oms-container .oms-content .oms-content-separator table tbody tr td hr {
+    background-image: -webkit-linear-gradient(top,transparent,white,transparent);
+    background-image: -moz-linear-gradient(top,transparent,white,transparent);
+    background-image: -ms-linear-gradient(top,transparent,white,transparent);
+    background-image: -o-linear-gradient(top,transparent,white,transparent);
+    background-image: linear-gradient(top,transparent,white,transparent);
+
+    border : 0;
+    margin:0;
+    height:592px;
+    width : 1px;
+}
+
+
+
+/* ---- AR ---- */
+
+body .oms-container .oms-content .oms-content-ar {
+    width:499px;
+    float:left;
+    margin-top: -25px;
+}
+
+body .oms-container .oms-content .oms-content-ar p {
+    font-family: Frutiger LT Arabic Roman;
+    font-size: 14px;
+    color: white;
+    margin-top:31px;
+    margin-left: 29px;
+    margin-right:30px;
+    direction: rtl; 
+    text-align: justify;
+}
+
+
+
+/* -------------------------------------
+    Buttons
+    ------------------------------------ */
+
+
+body .oms-container .oms-button {
+    width:100%;
+    margin-top:50px;
+}
+
+
+/* ---- FR ---- */
+
+body .oms-container .oms-button .oms-button-fr {
+    width:500px;
+    float:left;
+}
+
+body .oms-container .oms-button .oms-button-fr a {
+    display:block;
+    margin:0 auto;
+}
+
+body .oms-container .oms-button .oms-button-fr .oms-button {
+  width:327px;
+  height:43px;
+  background: #ffe119;
+  background-image: -webkit-linear-gradient(top, #ffe119, #ffb400);
+  background-image: -moz-linear-gradient(top, #ffe119, #ffb400);
+  background-image: -ms-linear-gradient(top, #ffe119, #ffb400);
+  background-image: -o-linear-gradient(top, #ffe119, #ffb400);
+  background-image: linear-gradient(to bottom, #ffe119, #ffb400);
+  -webkit-border-radius: 6;
+  -moz-border-radius: 6;
+  border-radius: 6px;
+  -webkit-box-shadow: 0px 1px 3px #666666;
+  -moz-box-shadow: 0px 1px 3px #666666;
+  box-shadow: 0px 1px 3px #666666;
+  font-family: Arial;
+  color: #036d2b;
+  font-size: 22px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin:0 auto;
+  position:relative;
+}
+
+body .oms-container .oms-button .oms-button-fr .oms-button .yellow-button {
+  font-family: "OpenSans",sans-serif;
+  color: #ffffff;
+  font-size: 15px;
+  text-decoration: none;
+  position:absolute;
+  top:8px;
+  left:50%;
+}
+
+body .oms-container .oms-button .oms-button-fr .oms-button .yellow-button p {
+    margin: 0;
+    margin-left:-100px;
+    margin-top: 10px;
+    font-family: Swis721 BdRnd BT;
+    font-size:22px;
+    color:#036d2b;
+}
+
+body .oms-container .oms-button .oms-button-fr .oms-button .yellow-button:hover {
+    text-decoration: none;
+}
+
+
+/* ---- AR ---- */
+
+body .oms-container .oms-button .oms-button-ar {
+    width:500px;
+    float:left;
+}
+
+body .oms-container .oms-button .oms-button-ar a {
+    display:block;
+    margin:0 auto;
+}
+
+body .oms-container .oms-button .oms-button-ar .oms-button {
+  width:327px;
+  height:43px;
+  background: #ffe119;
+  background-image: -webkit-linear-gradient(top, #ffe119, #ffb400);
+  background-image: -moz-linear-gradient(top, #ffe119, #ffb400);
+  background-image: -ms-linear-gradient(top, #ffe119, #ffb400);
+  background-image: -o-linear-gradient(top, #ffe119, #ffb400);
+  background-image: linear-gradient(to bottom, #ffe119, #ffb400);
+  -webkit-border-radius: 6;
+  -moz-border-radius: 6;
+  border-radius: 6px;
+  -webkit-box-shadow: 0px 1px 3px #666666;
+  -moz-box-shadow: 0px 1px 3px #666666;
+  box-shadow: 0px 1px 3px #666666;
+  font-family: Arial;
+  color: #036d2b;
+  font-size: 22px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin:0 auto;
+  position:relative;
+}
+
+body .oms-container .oms-button .oms-button-ar .oms-button .yellow-button {
+  font-family: "OpenSans",sans-serif;
+  color: #ffffff;
+  font-size: 15px;
+  text-decoration: none;
+  position:absolute;
+  top:8px;
+  left:50%;
+}
+
+body .oms-container .oms-button .oms-button-ar .oms-button .yellow-button p {
+    margin: 0;
+    margin-left:-70px;
+    margin-top: -10px;
+    font-family: Frutiger LT Arabic Roman;
+    font-size:30px;
+    color:#036d2b;
+}
+
+body .oms-container .oms-button .oms-button-ar .oms-button .yellow-button:hover {
+    text-decoration: none;
+}
+
+
+
+
+/* -------------------------------------
+    Footer
+    ------------------------------------ */
+
+
+body  .oms-footer {
+    width:100%;
+    padding-top: 258px;
+    padding-bottom: 134px;
+    background-image:url(../img/background-bottom.png);
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+body  .oms-footer .oms-footer-container {
+    text-align: center;
+}
+
+body  .oms-footer img {
+    display:block;
+    margin: 0 auto;
+}
+
+body  .oms-footer p {
+    margin-top: 50px;
+    color:white;
+    font-family: "Arial";
+    font-size: 12px;
+}
+
+body  .oms-footer a {
+    color:#7ae13e;
+    text-decoration: none;
+}
+
+
+/* -------------------------------------
+    Responsive hidden
+    ------------------------------------ */
+
+.oms-button-fr-resp {
+    display: none;
+}
+
+.oms-title-fr-resp {
+    display: none;
+}
+
+.oms-content-separator-resp {
+    display: none;
+}
+
+.oms-button-ar-resp {
+    display: none;
+}
+
+.oms-title-ar-resp {
+    display: none;
+}
+
+@media (max-width: 480px) {
+
+    .oms-button-fr {
+    display: none;
+    }
+
+    .oms-title-fr {
+        display: none;
+    }
+
+    .oms-content-separator {
+        display: none;
+    }
+
+    .oms-button-ar {
+        display: none;
+    }
+
+    .oms-title-ar {
+        display: none;
+    }
+
+}
