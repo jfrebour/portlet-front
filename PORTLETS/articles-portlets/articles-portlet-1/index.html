@@ -1,0 +1,100 @@
+
+<article class="articles-p1">
+    <div class="articles-p1-imgs">
+        <div class="articles-p1-img articles-p1-img-1">
+            <img src="img/bledima-pic.png" class="img-no-button" alt="" />
+        </div>
+        <div class="articles-p1-img articles-p1-img-2">
+            <a href="#">
+                <img src="img/calculate-date.png" class="img-button" alt="" />
+            </a>
+        </div>
+        <div class="articles-p1-img articles-p1-img-3">
+            <a href="#">
+                <img src="img/new-recipies.png" class="img-button" alt="" />
+            </a>
+        </div>
+        <div style="clear:both"></div>
+    </div>
+</article>
+    
+<style>
+
+@font-face {
+    font-family: Swiss721BT BoldRounded;
+    src: url(./fonts/UFONTS.COM_SWISS_721_BOLD_ROUNDED_BT.TTF);
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(./fonts/OpenSans-Regular_1.ttf);
+}
+
+article {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+@media (min-width: 581px) {
+
+    .articles-p1 {
+        width:100%;
+    }
+
+    .articles-p1 .articles-p1-imgs {
+        max-width:360px;
+        margin: 0 auto;
+    }
+
+    .articles-p1 .articles-p1-imgs .articles-p1-img {
+        position: relative;
+        margin-bottom: 4%;
+    }
+
+    .articles-p1 .articles-p1-imgs img {
+        width:100%;
+
+    }   
+
+}
+
+@media (max-width: 580px) {
+
+    .articles-p1 {
+        width:100%;
+        margin-bottom:20px;
+    }
+
+    .articles-p1 .articles-p1-imgs {
+        max-width:360px;
+        margin: 0 auto;
+    }
+
+    .articles-p1 .articles-p1-imgs .articles-p1-img {
+        position: relative;
+        margin-bottom: 4%;
+        width:48%;
+        display: inline-block;
+    }
+
+    .articles-p1 .articles-p1-imgs img {
+        width:100%;
+
+    } 
+
+    .articles-p1-img-1 {
+        float: left;
+    } 
+
+    .articles-p1-img-2 {
+        float: right;
+    } 
+
+    .articles-p1-img-3 {
+        display: none !important;
+    }
+
+}
+
+</style>
