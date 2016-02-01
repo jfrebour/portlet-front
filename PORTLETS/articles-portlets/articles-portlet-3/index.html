@@ -13,6 +13,7 @@
                     <h3>Une alimentation variee et equilibree</h3>
                     <p>Une bonne alimentation est une alimentation variee et equilibree. Elle apporte tous les nutriments dont le corps a besoin pour se maintenir en forme, et pour fournir a votre bebe les elements necessaires a son developpement <a href="#">...Lire la suite</a> </p>
             </div>
+            <div style="clear:both"></div>
         </div>
         <div class="articles-p3-section-list-subarticle">
             <div class="p3-list-image">
@@ -22,8 +23,9 @@
                     <h3>Une alimentation variee et equilibree</h3>
                     <p>Une bonne alimentation est une alimentation variee et equilibree. Elle apporte tous les nutriments dont le corps a besoin pour se maintenir en forme, et pour fournir a votre bebe les elements necessaires a son developpement <a href="#">...Lire la suite</a> </p>
             </div>
+            <div style="clear:both"></div>
         </div>
-        <div class="articles-p3-section-list-subarticle">
+        <div class="articles-p3-section-list-subarticle articles-p3-last-article-resp">
             <div class="p3-list-image">
                 <img src="img/p3-image.png">
             </div>
@@ -31,8 +33,9 @@
                     <h3>Une alimentation variee et equilibree</h3>
                     <p>Une bonne alimentation est une alimentation variee et equilibree. Elle apporte tous les nutriments dont le corps a besoin pour se maintenir en forme, et pour fournir a votre bebe les elements necessaires a son developpement <a href="#">...Lire la suite</a> </p>
             </div>
+            <div style="clear:both"></div>
         </div>
-        <div class="articles-p3-section-list-subarticle">
+        <div class="articles-p3-section-list-subarticle articles-p3-last-article">
             <div class="p3-list-image">
                 <img src="img/p3-image.png">
             </div>
@@ -40,12 +43,12 @@
                     <h3>Une alimentation variee et equilibree</h3>
                     <p>Une bonne alimentation est une alimentation variee et equilibree. Elle apporte tous les nutriments dont le corps a besoin pour se maintenir en forme, et pour fournir a votre bebe les elements necessaires a son developpement <a href="#">...Lire la suite</a> </p>
             </div>
+            <div style="clear:both"></div>
         </div>
     </div>
-    <div style="clear:both"></div>
     <div class="articles-p3-section-tags">
         <div class="p3-section-tags-wrapper">
-            <a href="#" class="p3-prev"> <img src="img/p3-left-grey-arrow.png">Precedent</a>
+            <span class="p3-prev"> <img src="img/p3-left-grey-arrow.png">Precedent</span>
             <span class="p3-no-link">1</span>
             <a href="#">2</a>
             <a href="#">3</a>
@@ -106,8 +109,7 @@ article {
 
 .articles-p3 .articles-p3-section-list .articles-p3-section-list-subarticle {
     margin-top: 30px;
-    margin-bottom: 60px;
-}
+    margin-bottom: 60px;}
 
 .articles-p3 .articles-p3-section-list .articles-p3-section-list-subarticle .p3-list-image {
     float:left;
@@ -120,9 +122,8 @@ article {
     height: auto;
 }
 
-.articles-p3 .articles-p3-section-list .articles-p3-section-list-subarticle .p3-list-image .p3-list-content {
-    float:left;
-    width:;
+.articles-p3 .articles-p3-section-list .articles-p3-section-list-subarticle .p3-list-content {
+
 }
 
 .articles-p3 .articles-p3-section-list .articles-p3-section-list-subarticle .p3-list-content h3 {
@@ -178,14 +179,22 @@ article {
 
 .articles-p3 .articles-p3-section-tags a.p3-prev {
     margin-right: 15px;
-    color:#b5b5b5;
 }
 
 .articles-p3 .articles-p3-section-tags a.p3-prev img {
     margin-right: 5px;
 }
 
-.p3-no-link {
+.articles-p3 .articles-p3-section-tags span.p3-prev {
+    margin-right: 15px;
+    color:#b5b5b5;
+}
+
+.articles-p3 .articles-p3-section-tags span.p3-prev img {
+    margin-right: 5px;
+}
+
+.articles-p3 .articles-p3-section-tags .p3-no-link {
     margin-right: 5px;
 }
 
@@ -194,6 +203,15 @@ article {
 }
 
 .articles-p3 .articles-p3-section-tags a.p3-next img {
+    margin-left: 5px;
+}
+
+.articles-p3 .articles-p3-section-tags span.p3-next {
+    margin-left: 15px;
+    color:#b5b5b5;
+}
+
+.articles-p3 .articles-p3-section-tags span.p3-next img {
     margin-left: 5px;
 }
 
@@ -216,14 +234,38 @@ article {
     margin-left: 5px;
 }
 
-@media (min-width: 481px) {
+@media (min-width: 581px) {
 
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 580px) {
 
+    .articles-p3 .articles-p3-section-list .articles-p3-section-list-subarticle  .p3-list-content {
+        width:55%;
+        float:left;
+    }
 
+    .articles-p3 .articles-p3-section-list .articles-p3-last-article {
+        display: none !important;
+    }
+
+    .articles-p3 .articles-p3-section-list .articles-p3-section-list-subarticle {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+        border-bottom: #969696 2px dashed;
+    }
+
+    .articles-p3 .articles-p3-section-list .articles-p3-last-article-resp {
+        border-bottom: 0;
+        margin-bottom: 8px;
+
+    }
+
+    .p3-list-image img {
+        margin-top: 30px;
+    }
 
 }
 
