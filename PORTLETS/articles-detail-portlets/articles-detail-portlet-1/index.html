@@ -1,20 +1,14 @@
 
 <article class="articles-detail-p1">
     <div class="articles-detail-p1-imgs">
-        <div class="articles-detail-p1-img articles-detail-p1-img-1">
-            <img src="img/bledima-pic.png" class="img-no-button" alt="" />
-        </div>
-        <div class="articles-detail-p1-img articles-detail-p1-img-2">
-            <a href="#">
-                <img src="img/calculate-date.png" class="img-button" alt="" />
+        <div class="articles-detail-p1-img">
+            <img src="img/calculate-date-plain.png" class="img-button" alt="" />            
+
+            <a href="#" class="articles-detail-p1-button">
+                <img src="img/portlet-p1-arrow.png"> Faire le calcul
             </a>
+
         </div>
-        <div class="articles-detail-p1-img articles-detail-p1-img-3">
-            <a href="#">
-                <img src="img/new-recipies.png" class="img-button" alt="" />
-            </a>
-        </div>
-        <div style="clear:both"></div>
     </div>
 </article>
     
@@ -22,12 +16,12 @@
 
 @font-face {
     font-family: Swiss721BT BoldRounded;
-    src: url(./fonts/UFONTS.COM_SWISS_721_BOLD_ROUNDED_BT.TTF);
+    src: url(fonts/UFONTS.COM_SWISS_721_BOLD_ROUNDED_BT.TTF);
 }
 
 @font-face {
     font-family: OpenSans;
-    src: url(./fonts/OpenSans-Regular_1.ttf);
+    src: url(fonts/OpenSans-Regular_1.ttf);
 }
 
 article {
@@ -36,30 +30,65 @@ article {
 }
 
 
-@media (min-width: 581px) {
 
-    .articles-detail-p1 {
-        width:100%;
-    }
+.articles-detail-p1 {
+    width:100%;
+}
 
-    .articles-detail-p1 .articles-detail-p1-imgs {
-        max-width:360px;
-        margin: 0 auto;
-    }
+.articles-detail-p1 .articles-detail-p1-imgs {
+    max-width:360px;
+    margin: 0 auto;
+}
 
-    .articles-detail-p1 .articles-detail-p1-imgs .articles-detail-p1-img {
-        position: relative;
-        margin-bottom: 4%;
-    }
+.articles-detail-p1 .articles-detail-p1-imgs .articles-detail-p1-img {
+    position: relative;
+}
 
-    .articles-detail-p1 .articles-detail-p1-imgs img {
-        width:100%;
+.articles-detail-p1 img {
+    width: 100%;
+}
 
-    }   
+
+.articles-detail-p1 .articles-detail-p1-img-2 img {
+    width:100%;
 
 }
 
-@media (max-width: 580px) {
+.articles-detail-p1-button img {
+    width:14px;
+}
+
+.articles-detail-p1-button {
+    
+    font-family: Swiss721BT BoldRounded;
+    font-size: 20px;
+    -webkit-border-radius: 5;
+    -moz-border-radius: 5;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 1px 3px #666666;
+    -moz-box-shadow: 0px 1px 3px #666666;
+    box-shadow: 0px 1px 3px #666666;
+    color: #ffffff;
+    background: #ec008c;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    position: absolute;
+    z-index: 1;
+    bottom:5%;
+    left:25%;
+}
+
+.articles-detail-p1-button:hover {
+  text-decoration: none;
+} 
+
+@media (min-width: 581px) {
+
+    
+
+}
+
+/*@media (max-width: 580px) {
 
     .articles-detail-p1 {
         width:100%;
@@ -95,6 +124,6 @@ article {
         display: none !important;
     }
 
-}
+}*/
 
 </style>
