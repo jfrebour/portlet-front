@@ -1,0 +1,154 @@
+<!-- jQuery library (served from Google) -->
+        <script src="./js/jquery.min.js"></script>
+        <!-- bxSlider Javascript file -->
+        <script src="./js/jquery.bxslider.min.js"></script>
+        <!-- bxSlider CSS file -->
+        <link href="./lib/jquery.bxslider.css" rel="stylesheet" />
+<article class="about-p2">
+    <h3>Produits Bledina</h3>
+    <div id="slide_home_page">
+        <article class="slider_hp">
+            <img src="img/about-p2-slider-img.png" />
+        </article>
+        <article class="slider_hp">
+            <img src="img/about-p2-slider-img.png" />
+        </article>
+        <article class="slider_hp">
+            <img src="img/about-p2-slider-img.png" />
+        </article>
+        <article class="slider_hp">
+            <img src="img/about-p2-slider-img.png" />
+        </article>
+        <article class="slider_hp">
+            <img src="img/about-p2-slider-img.png" />
+        </article>
+    </div>
+<script>$(document).ready(function(){
+  $('#slide_home_page').bxSlider();
+});</script>
+</article>
+    
+<style>
+
+@font-face {
+    font-family: Swiss721BT BoldRounded;
+    src: url(fonts/UFONTS.COM_SWISS_721_BOLD_ROUNDED_BT.TTF);
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(fonts/OpenSans-Regular_1.ttf);
+}
+
+article {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    max-width: 310px;
+}
+
+
+.about-p2 h3 {
+    font-family: Swiss721BT BoldRounded;
+    font-size: 20px;
+    color: #939496;
+    text-align: center;
+    margin-bottom: 7px;
+}
+
+.about-p2 #slide_home_page .slider_hp {
+    position: relative; 
+}
+
+.about-p2 #slide_home_page .slider_hp a {
+    background: #ffc600;
+    border-radius: 10px;
+    bottom: 15%;
+    box-sizing: border-box;
+    color: #fff;
+    display: block;
+    font-family: Swiss;
+    font-size: 15px;
+    font-weight: 300;
+    height: 44px;
+    line-height: 44px;
+    padding: 0 50px 0 60px;
+    position: absolute;
+    right: 16%; 
+}
+
+.about-p2 .bx-wrapper {
+    position: relative; 
+}
+
+.about-p2 .bx-wrapper .bx-viewport {
+    box-shadow: none;
+    left:0;
+    border:0;
+
+}
+
+.about-p2 .bx-wrapper .bx-controls-direction .bx-prev {
+    background-image: url("img/slider_arrow.png");
+    background-position: 0 0;
+    background-size: auto auto;
+    display: block;
+    height: 79px;
+    left: 0;
+    margin-top: -38px;
+    position: absolute;
+    top: 50%;
+    width: 46px; 
+}
+
+.about-p2 .bx-wrapper .bx-controls-direction .bx-prev.disabled {
+    display: none; 
+}
+
+.about-p2 .bx-wrapper .bx-controls-direction .bx-next {
+    background-image: url("img/slider_arrow.png");
+    background-position: -46px 0;
+    background-size: auto auto;
+    display: block;
+    height: 79px;
+    right: 0;
+    margin-top: -38px;
+    position: absolute;
+    top: 50%;
+    width: 46px; 
+}
+
+.about-p2 .bx-wrapper .bx-controls-direction .bx-next.disabled {
+    display: none; 
+}
+
+.about-p2 .bx-wrapper .bx-pager.bx-default-pager {
+    border-radius: 0 0 5px 5px;
+    border-top: 0 none;
+    bottom: 0;
+    box-shadow: 0 1px 5px -3px;
+    box-sizing: border-box;
+    height: 28px;
+    padding: 0 15px;
+    position: absolute; 
+}
+
+.about-p2 .bx-wrapper .bx-pager.bx-default-pager .bx-pager-item {
+    display: inline-block; 
+}
+
+.about-p2 .bx-wrapper .bx-pager.bx-default-pager .bx-pager-item a {
+    background: #ffc600;
+    border-radius: 50%;
+    box-sizing: border-box;
+    color: transparent;
+    display: block;
+    height: 12px;
+    margin: 7px 3px 0;
+    width: 12px; 
+}
+
+.about-p2 .bx-wrapper .bx-pager.bx-default-pager .bx-pager-item a.active {
+    background: #ed018d; 
+}
+
+</style>
